@@ -6,7 +6,7 @@ LIBS=pilwgpio
 %.o: %.c
 	$(CC) -c -o $@ $< $(CFLAGS)
 
-test: test.o
+keypad: keypad.o
 	$(CC) -o $@ -L/usr/local/lib/ $^ -l$(LIBS) $(CFLAGS)
 
 clean:
